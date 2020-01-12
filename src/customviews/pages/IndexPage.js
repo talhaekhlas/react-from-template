@@ -210,13 +210,13 @@ class IndexPage extends React.Component {
                     </NavLink>
                     <NavLink tag="li" style={{padding:0}}>
                       <DropdownItem className="nav-item">
-                      Sort by priority
+                      <i style={{fontSize:'12px'}} className='tim-icons icon-check-2'></i> Sort by priority
                       </DropdownItem>
                     </NavLink>
                     
                     <NavLink tag="li" style={{padding:0}}>
                       <DropdownItem className="nav-item">
-                      Sort by name
+                      <i style={{fontSize:'12px'}} className='tim-icons icon-check-2'></i> Sort by name
                       </DropdownItem>
                     </NavLink>
                     <DropdownItem divider tag="li" />
@@ -234,12 +234,12 @@ class IndexPage extends React.Component {
                     <DropdownItem divider tag="li" />
                     <NavLink tag="li" style={{padding:0}}>
                       <DropdownItem className="nav-item">
-                      Email tasks to this project
+                      <i style={{fontSize:'12px'}} className='tim-icons icon-email-85'></i> Email tasks to this project
                       </DropdownItem>
                     </NavLink>
                     <NavLink tag="li" style={{padding:0}}>
                       <DropdownItem className="nav-item">
-                      Project calendar feed
+                      <i style={{fontSize:'12px'}} className='tim-icons icon-calendar-60'></i> Project calendar feed
                       </DropdownItem>
                     </NavLink>
                     
@@ -247,12 +247,13 @@ class IndexPage extends React.Component {
                     <DropdownItem divider tag="li" />
                     <NavLink tag="li" style={{padding:0}}>
                       <DropdownItem className="nav-item">
-                      Show completed tasks
+                      <i style={{fontSize:'12px'}} className='tim-icons icon-bullet-list-67'></i> Show completed tasks
                       </DropdownItem>
                     </NavLink>
                   </DropdownMenu>
                 </UncontrolledDropdown>
                 </CardHeader>
+                
 
                 
 
@@ -267,23 +268,7 @@ class IndexPage extends React.Component {
 
                 <Modal isOpen={this.state.modalShow} size="lg">
                     
-                    {/* <ModalHeader> */}
-                    {/* <p>dfdf</p> */}
-                    {/* <ModalTitle>Modal heading</ModalTitle> */}
-                    {/* </ModalHeader> */}
-
-                    {/* <ModalBody>Woohoo, you're reading this text in a modal!</ModalBody>
-                    <ModalFooter> 
-                    <Button variant="secondary" onClick={this.handleClose}>
-                        Close
-                    </Button>
-                    <Button variant="primary" onClick={this.handleClose}>
-                        Save Changes
-                    </Button>
-                    </ModalFooter>  */}
-                    {/* <Card>
-                    </Card> */}
-                    
+                   
 
                     <Card>
                         <CardHeader>
@@ -303,60 +288,45 @@ class IndexPage extends React.Component {
                        
                         <CardBody>
                         <Nav className="nav-pills-info" pills>
-                            <NavItem>
+                            <NavItem style={{width:'50%'}}>
                             <NavLink
                                 data-toggle="tab"
                                 href="#pablo"
                                 className={
-                                this.state.horizontalTabs === "profile"
+                                this.state.horizontalTabs === "comments"
                                     ? "active"
                                     : ""
                                 }
                                 onClick={e =>
-                                this.changeActiveTab(e, "horizontalTabs", "profile")
+                                this.changeActiveTab(e, "horizontalTabs", "comments")
                                 }
                             >
-                                Profile
+                                Comments
                             </NavLink>
                             </NavItem>
-                            <NavItem>
+                            <NavItem style={{width:'50%'}}>
                             <NavLink
                                 data-toggle="tab"
                                 href="#pablo"
                                 className={
-                                this.state.horizontalTabs === "settings"
+                                this.state.horizontalTabs === "activity"
                                     ? "active"
                                     : ""
                                 }
                                 onClick={e =>
-                                this.changeActiveTab(e, "horizontalTabs", "settings")
+                                this.changeActiveTab(e, "horizontalTabs", "activity")
                                 }
                             >
-                                Settings
+                                Activity
                             </NavLink>
                             </NavItem>
-                            <NavItem>
-                            <NavLink
-                                data-toggle="tab"
-                                href="#pablo"
-                                className={
-                                this.state.horizontalTabs === "options"
-                                    ? "active"
-                                    : ""
-                                }
-                                onClick={e =>
-                                this.changeActiveTab(e, "horizontalTabs", "options")
-                                }
-                            >
-                                Options
-                            </NavLink>
-                            </NavItem>
+                           
                         </Nav>
                         <TabContent
                             className="tab-space"
                             activeTab={this.state.horizontalTabs}
                         >
-                            <TabPane tabId="profile">
+                            <TabPane tabId="comments">
                             Collaboratively administrate empowered markets via
                             plug-and-play networks. Dynamically procrastinate B2C
                             users after installed base benefits. <br />
@@ -364,7 +334,7 @@ class IndexPage extends React.Component {
                             Dramatically visualize customer directed convergence
                             without revolutionary ROI.
                             </TabPane>
-                            <TabPane tabId="settings">
+                            <TabPane tabId="activity">
                             Efficiently unleash cross-media information without
                             cross-media value. Quickly maximize timely deliverables
                             for real-time schemas. <br />
@@ -372,14 +342,7 @@ class IndexPage extends React.Component {
                             Dramatically maintain clicks-and-mortar solutions without
                             functional solutions.
                             </TabPane>
-                            <TabPane tabId="options">
-                            Completely synergize resource taxing relationships via
-                            premier niche markets. Professionally cultivate one-to-one
-                            customer service with robust ideas. <br />
-                            <br />
-                            Dynamically innovate resource-leveling customer service
-                            for state of the art customer service.
-                            </TabPane>
+                            
                         </TabContent>
                         </CardBody>
                     </Card>
