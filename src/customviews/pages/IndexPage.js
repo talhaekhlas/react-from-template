@@ -76,7 +76,8 @@ class IndexPage extends React.Component {
         this.state = {
           alert: null,
           modalShow:false,
-          modalClose:true
+          modalClose:true,
+          horizontalTabs:'comments'
         };
       }
 
