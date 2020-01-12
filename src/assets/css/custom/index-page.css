@@ -1,0 +1,45 @@
+
+.ip_comment_tooltip{
+    position: relative;
+
+}
+
+.ip_comment_tooltip:hover{
+    color:red;
+    cursor:pointer;
+}
+
+.ip_comment_button{
+    color:gray;
+}
+
+.ip_comment_button:hover{
+    cursor:pointer;
+}
+
+.in_cross_button:hover{
+    cursor:pointer;
+    background: red;
+    padding: 3px;
+    border-radius: 1px;
+}
+
+.in_dot{
+    font-size: 8px;
+    color:gray;
+}
+.in_dot:hover{
+    cursor:pointer;
+    font-size: 10px;
+}
+
+/* .ip_comment_tooltip:hover::before{
+    content: 'hamba';
+    height: 100px;
+    width: 30px;
+    background: red;
+    padding: 5px;
+    font-size: 14px;
+    position: absolute;
+} */
+

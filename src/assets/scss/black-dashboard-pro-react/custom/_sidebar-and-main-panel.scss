@@ -355,9 +355,11 @@
   }
 
   &[data="blue"] {
-    @include linear-gradient($info-states, $info);
+    // @include linear-gradient($info-states, $info);
+    @include linear-gradient(#2E4053,#1B4F72);
     &:before {
-      border-bottom-color: $info;
+      // border-bottom-color: $info;
+      border-bottom-color: #1B4F72;
     }
   }
   &[data="green"] {

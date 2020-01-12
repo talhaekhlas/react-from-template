@@ -43,7 +43,17 @@ import Login from "views/pages/Login.jsx";
 import Rtl from "views/pages/Rtl.jsx";
 import Lock from "views/pages/Lock.jsx";
 
+import IndexPage from "customviews/pages/IndexPage";
+
 const routes = [
+  {
+    path: "/index",
+    name: "Index",
+    rtlName: "لوحة القيادة",
+    icon: "fas fa-home",
+    component: IndexPage,
+    layout: "/custom"
+  },
   {
     path: "/dashboard",
     name: "Dashboard",
