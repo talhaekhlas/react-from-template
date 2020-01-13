@@ -15,6 +15,7 @@
 
 */
 import React from "react";
+import ReactDatetime from "react-datetime";
 
 // reactstrap components
 import { Card,
@@ -38,24 +39,14 @@ import { Card,
        Label,
         FormGroup,
         Form,
+        InputGroup,
+        InputGroupAddon,
+       
+        // FormControl
         
        
     } from "reactstrap";
-
-    // import {
-    //     Card,
-    //     CardHeader,
-    //     CardBody,
-    //     CardTitle,
-    //     Collapse,
-    //     NavItem,
-    //     NavLink,
-    //     Nav,
-    //     TabContent,
-    //     TabPane,
-    //     Row,
-    //     Col
-    //   } from "reactstrap";
+  
 
     import {closeButton} from "reactstrap";
 import ReactBSAlert from "react-bootstrap-sweetalert";
@@ -350,12 +341,16 @@ class IndexPage extends React.Component {
                             
                             </TabPane>
                             <TabPane tabId="activity">
-                            Efficiently unleash cross-media information without
-                            cross-media value. Quickly maximize timely deliverables
-                            for real-time schemas. <br />
-                            <br />
-                            Dramatically maintain clicks-and-mortar solutions without
-                            functional solutions.
+                            <TabPane tabId="comments">
+                              <div style={{padding:'10px 50px'}}>
+                              Add notes, file uploads, and voice memos to your project, so you always have the information you need right when you need it.
+                              </div>
+
+                              <div style={{padding:'10px 25%'}}>
+                              <Button color="default" size="sm">Go Premium</Button>Learn More
+                              </div>
+
+                            </TabPane>
                             </TabPane>
                             
                         </TabContent>
@@ -396,23 +391,39 @@ class IndexPage extends React.Component {
           </Row>
 
           <Row>
+            
+            
             <Col className="mb-2 ml-2" 
+           
+            style={{paddingLeft:'30px'}}
+            >
+
+            <InputGroup style={{width:'70%'}}>
+              <Input placeholder="username" style={{width:'50%',outline:0,borderRadius:0,border:'1px solid black'}}  />
+              <InputGroupAddon addonType="append" 
+              style={{width:'30%',
+              outline:0,
+             
+              borderRadius:0
               
-               >
-            
-                    <FormGroup>
-                      <Input type="email" />
-                    </FormGroup>
-            
-            </Col>
-            <Col className="mb-2 ml-2" 
+              }}>
+                <ReactDatetime
+                      style={{border:'1px solid black',outline:0}}
+                      inputProps={{
+                        className: "form-control",
+                        placeholder: "Datetime Picker Here"
+                      }}></ReactDatetime>
+              {/* <Input placeholder="username" style={{outline:0,borderRadius:0,border:0}}/> */}
+              </InputGroupAddon>
+              {/* <FormGroup>
+              <ReactDatetime
+                      inputProps={{
+                        className: "form-control",
+                        placeholder: "Datetime Picker Here"
+                      }}
+                    /></FormGroup> */}
+            </InputGroup>
               
-               >
-            
-                    <FormGroup>
-                      <Input type="email" />
-                    </FormGroup>
-            
             </Col>
             
           </Row>
@@ -422,7 +433,7 @@ class IndexPage extends React.Component {
           
 
 
-          <Row>
+          {/* <Row>
             <Col className="mb-5" md="12">
               <Card>
                 <CardHeader>
@@ -499,7 +510,7 @@ class IndexPage extends React.Component {
               </Card>
             </Col>
             
-          </Row>
+          </Row> */}
         </div>
       </>
     );
