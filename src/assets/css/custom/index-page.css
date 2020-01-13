@@ -17,6 +17,14 @@
     cursor:pointer;
 }
 
+.ip_comment_input_box{
+    margin:10px 10px;
+    border:0;
+    outline: none;
+    height: 35px;
+    width: 95%;
+}
+
 .in_cross_button:hover{
     cursor:pointer;
     background: red;
@@ -31,6 +39,18 @@
 .in_dot:hover{
     cursor:pointer;
     font-size: 10px;
+}
+
+.ip_add_task_plus_button:hover{
+    background: black;
+    color:white;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+
+.ip_add_task:hover{
+    cursor: pointer;
 }
 
 /* .ip_comment_tooltip:hover::before{

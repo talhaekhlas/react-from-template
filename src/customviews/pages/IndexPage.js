@@ -30,20 +30,16 @@ import { Card,
        TabContent,
        TabPane,
        Button,
-       Collapse,
        DropdownToggle,
        DropdownMenu,
        DropdownItem,
        UncontrolledDropdown,
        Input,
-       InputGroup,
-       NavbarBrand,
-       Navbar,
-       
-       
-        Container,
+       Label,
+        FormGroup,
+        Form,
         
-        UncontrolledTooltip
+       
     } from "reactstrap";
 
     // import {
@@ -146,8 +142,8 @@ class IndexPage extends React.Component {
         <div className="content">
         {this.state.alert}
         <Card>
-          <Row  >
-              <Col className="mb-5 ml-2" 
+          <Row  style={{height:'60px'}}>
+              <Col className="mb-2 ml-2" 
               md={{span: 2, order: 1}}
               sm={{span: 2, order: 1}}
               xs={{span: 2, order: 1}}
@@ -328,12 +324,30 @@ class IndexPage extends React.Component {
                             activeTab={this.state.horizontalTabs}
                         >
                             <TabPane tabId="comments">
-                            Collaboratively administrate empowered markets via
-                            plug-and-play networks. Dynamically procrastinate B2C
-                            users after installed base benefits. <br />
-                            <br />
-                            Dramatically visualize customer directed convergence
-                            without revolutionary ROI.
+                              <div style={{padding:'10px 50px'}}>
+                              Add notes, file uploads, and voice memos to your project, so you always have the information you need right when you need it.
+                              </div>
+
+                              <div style={{padding:'10px 25%'}}>
+                              <Button color="default" size="sm">Go Premium</Button>Learn More
+                              </div>
+                              <div style={{width:'100%',height:'140px',border:'1px solid gray',padding:'10px'}}>
+                                <input type="text" 
+                                className='ip_comment_input_box'
+                                 autoFocus='on' 
+                                 placeholder='comment please'/>
+                                 <hr style={{width:'95%'}}/>
+
+                                 <i className='tim-icons icon-attach-87' style={{marginLeft:'2%'}}></i>
+                                 <i className='fas fa-microphone' style={{marginLeft:'2%'}}></i>
+                                 <i class="fas fa-smile" style={{marginLeft:'2%',color:'gray'}}></i>
+                                 <Button color="default" style={{marginLeft:'70%',color:'whitee',display:'inline'}} size="sm">Add Comment</Button>
+                                 
+
+                              </div>
+
+
+                            
                             </TabPane>
                             <TabPane tabId="activity">
                             Efficiently unleash cross-media information without
@@ -363,8 +377,51 @@ class IndexPage extends React.Component {
 
                 
               </Col>
+
           </Row>
+          <Row>
+            <Col className="mb-2 ml-2" 
+              
+               >
+            <div style={{display:'inline'}}>
+              <i style={{fontSize:'12px'}} 
+              className='tim-icons icon-simple-add ip_add_task_plus_button'
+              >
+              </i>&nbsp;&nbsp;&nbsp;&nbsp;  
+              <span className='ip_add_task'>Add Task</span>
+            </div>
+            
+            </Col>
+            
+          </Row>
+
+          <Row>
+            <Col className="mb-2 ml-2" 
+              
+               >
+            
+                    <FormGroup>
+                      <Input type="email" />
+                    </FormGroup>
+            
+            </Col>
+            <Col className="mb-2 ml-2" 
+              
+               >
+            
+                    <FormGroup>
+                      <Input type="email" />
+                    </FormGroup>
+            
+            </Col>
+            
+          </Row>
+          
           </Card>
+
+          
+
+
           <Row>
             <Col className="mb-5" md="12">
               <Card>
